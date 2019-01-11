@@ -66,7 +66,7 @@ end
 def organize_schools(schools)
   output_hash= {}
   schools.each do |school, values|
-    location = values.fetch(:location)
+    location = values[:location]
     binding.pry
     if output_hash.has_key?(location)
       output_hash[location] << school
