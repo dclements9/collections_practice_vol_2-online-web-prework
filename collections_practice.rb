@@ -56,3 +56,7 @@ def merge_data(keys, data)
   end
   output_array
 end
+
+def find_cool(data)
+  data.select {|element| element.has_value?("cool")}
+end
