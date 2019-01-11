@@ -45,3 +45,14 @@ def count_elements(array)
   end
  output_array
 end
+
+def merge_data(keys, data)
+  output_array = []
+  counter = 0
+  while counter <= keys.size - 1 do
+    merged_data = (keys[counter].merge(data[0].values[counter]))
+    output_array << merged_data
+    counter += 1
+  end
+  output_array
+end
