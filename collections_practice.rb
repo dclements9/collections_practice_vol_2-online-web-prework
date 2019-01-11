@@ -1,3 +1,5 @@
+require 'pry'
+
 def begins_with_r(array)
   status = true
     array.each do |word|
@@ -59,4 +61,19 @@ end
 
 def find_cool(data)
   data.select {|element| element.has_value?("cool")}
+end
+
+def organize_schools(schools)
+  output_hash= {}
+  schools.each do |school, values|
+    location = values.fetch(:location)
+    binding.pry
+    if output_hash.has_key?(location)
+      output_hash[location] << school
+    else
+      output_hash[location] = []
+      output_hash[location] << school
+    end
+  end
+  output_hash
 end
