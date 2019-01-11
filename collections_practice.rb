@@ -35,6 +35,13 @@ def first_wa(array)
     new_array
    end
 
-def count_elements (array)
-  
+def count_elements(array)
+ output_array = []
+   array.each do |element|
+     count_element = element
+     count_element[:count] = array.count(element)
+      array.delete(element)
+       output_array << count_element
+  end
+ output_array
 end
